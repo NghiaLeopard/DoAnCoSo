@@ -10,6 +10,8 @@ import ProductMenu from '../components/ProductMenu';
 import ProductDescription from '../components/ProductDescription';
 import ProductAdditional from '../components/ProductAdditional';
 import ProductReviews from '../components/ProductReviews';
+import { useDispatch } from 'react-redux';
+import { addToCart } from 'features/cart/cartSelector';
 
 DetailPage.propTypes = {};
 
@@ -30,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 function DetailPage() {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const {
     params: { productId },
     url,
@@ -42,7 +45,13 @@ function DetailPage() {
   }
 
   const handleAddToCartSubmit = (formValues) => {
-    console.log(formValues);
+    dispatch(
+      addToCart({
+        id: product.id,
+        product,
+        quantity: formValues.quantity,
+      })
+    );
   };
 
   return (

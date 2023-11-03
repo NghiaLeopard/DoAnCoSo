@@ -64,4 +64,3 @@ Cart
 State tính toán phụ thuộc vào state có sẵn
 - cartItemsCount
 - cartTotal
---> createSelector()# DoAnCoSo

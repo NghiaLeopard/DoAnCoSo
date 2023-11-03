@@ -4,7 +4,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     showMiniCart: false,
-    cartItem: [],
+    cartItems: [],
   },
   reducers: {
     showCartFeatures(state) {
@@ -15,28 +15,28 @@ const cartSlice = createSlice({
     },
     addToCart(state, action) {
       const { id, quantity } = action.payload;
-      const indexCart = state.cartItem.findIndex((x) => x.id === id);
+      const indexCart = state.cartItems.findIndex((x) => x.id === id);
       if (indexCart <= 0) {
-        state.cartItem.push(action.payload);
+        state.cartItems.push(action.payload);
       } else {
-        state.cartItem[indexCart].quantity = quantity;
+        state.cartItems[indexCart].quantity = quantity;
       }
     },
     setQuantity(state, action) {
       const { id, quantity } = action.payload;
-      const indexCart = state.cartItem.findIndex((x) => x.id === id);
+      const indexCart = state.cartItems.findIndex((x) => x.id === id);
 
       // check if product is available in cart
       if (indexCart >= 0) {
-        state.cartItem[indexCart].quantity = quantity;
+        state.cartItems[indexCart].quantity = quantity;
       }
     },
     removeCart(state, { id }) {
-      state.cartItem = state.cartItem.filter((x) => x.id !== id);
+      state.cartItems = state.cartItems.filter((x) => x.id !== id);
     },
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { showCartFeatures, hideCartFeatures } = actions;
+export const { showCartFeatures, hideCartFeatures, addToCart, setQuantity, removeCart } = actions;
 export default reducer;
