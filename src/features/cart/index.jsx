@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Box, Container, Grid, Paper, makeStyles } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { cartItemsCountSelector } from './ceateSelector';
+import ProductsListSell from './components/ProductsListSell';
 
 CartFeature.propTypes = {};
 
@@ -23,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function CartFeature(props) {
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  console.log(cartItems);
   const cartItemsCount = useSelector(cartItemsCountSelector);
   const classes = useStyles();
 
@@ -32,7 +35,9 @@ function CartFeature(props) {
         <p>GIỎ HÀNG ({cartItemsCount} sản phẩm)</p>
         <Grid container spacing={2}>
           <Grid item className={classes.left}>
-            <Paper elevation={0}>Left</Paper>
+            <Paper elevation={0}>
+              <ProductsListSell />
+            </Paper>
           </Grid>
           <Grid item className={classes.right}>
             <Paper elevation={0}>right</Paper>

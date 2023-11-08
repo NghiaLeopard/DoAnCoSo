@@ -5,13 +5,13 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import InputField from 'components/form-control/inputField';
 import { Button } from '@material-ui/core';
-import QuantityField from 'components/form-control/quantityField/QuantityField';
+import QuantitySellCart from 'components/form-control/quantityField/QuantitySellCart';
 
-AddToCartForm.propTypes = {
+SellCartForm.propTypes = {
   onSubmit: PropTypes.func,
 };
 
-function AddToCartForm({ onSubmit = {} }) {
+function SellCartForm({ onSubmit = {} }) {
   const schema = yup.object().shape({
     quantity: yup.number().min(1, 'please enter at least 1').required('please enter quantity'),
   });
@@ -31,13 +31,9 @@ function AddToCartForm({ onSubmit = {} }) {
   };
   return (
     <form onSubmit={form.handleSubmit(handleSubmit)}>
-      <QuantityField name="quantity" label="quantity" form={form} />
-
-      <Button type="submit" variant="contained" color="primary" fullWidth size="large" style={{ width: '250px' }}>
-        ADD TO CART
-      </Button>
+      <QuantitySellCart name="quantity" label="quantity" form={form} />
     </form>
   );
 }
 
-export default AddToCartForm;
+export default SellCartForm;
