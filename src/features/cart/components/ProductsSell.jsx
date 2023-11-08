@@ -5,12 +5,14 @@ import { Button, makeStyles } from '@material-ui/core';
 import { formatPrice } from 'features/Product/components/utils';
 import QuantitySellCart from 'components/form-control/quantityField/QuantitySellCart';
 import QuantitySell from './QuantitySell';
+import { useSelector } from 'react-redux';
 ProductsSell.propTypes = {};
 
-function ProductsSell({ onChange, products }) {
+function ProductsSell({ onChange, products, onSubmit }) {
   const thumbnailUrl = products.product.thumbnail
     ? `${STATIC_HOST}${products.product.thumbnail?.url}`
     : THUMBNAIL_PLACEHOLDER;
+
   const handleRemove = (id) => {
     onChange(id);
   };
@@ -37,10 +39,10 @@ function ProductsSell({ onChange, products }) {
         </div>
         <div style={{ marginLeft: '80px', display: 'flex', fontSize: '15px' }}>
           <div style={{ textDecoration: 'line-through' }}> {products.product.originalPrice}đ </div>
-          {products.product.promotionPercent ? ` | -${products.product.promotionPercent}%` : '0%'}
+          {products.product.promotionPercent ? ` | -${products.product.promotionPercent}%` : '| 0%'}
         </div>
       </div>
-      <QuantitySell />
+      <QuantitySell cartItem={products} />
     </div>
   );
 }

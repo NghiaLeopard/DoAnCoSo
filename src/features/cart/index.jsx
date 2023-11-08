@@ -34,6 +34,10 @@ function CartFeature(props) {
     dispatch(removeCart(id));
   };
 
+  const handleOnSubmit = (value) => {
+    console.log(value);
+  };
+
   return (
     <Box>
       <Container>

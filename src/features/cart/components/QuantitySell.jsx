@@ -6,29 +6,41 @@ import * as yup from 'yup';
 import InputField from 'components/form-control/inputField';
 import { Button } from '@material-ui/core';
 import QuantitySellCart from 'components/form-control/quantityField/QuantitySellCart';
+import { useDispatch } from 'react-redux';
+import { setQuantity } from '../cartSelector';
 
 QuantitySell.propTypes = {
   onSubmit: PropTypes.func,
 };
 
-function QuantitySell({ onSubmit = {} }) {
+function QuantitySell({ cartItem }) {
+  const dispatch = useDispatch();
+
   const schema = yup.object().shape({
-    quantity: yup.number().min(1, 'please enter at least 1').required('please enter quantity'),
+    quantity: yup
+      .number()
+      .required('Please enter quantity')
+      .min(1, 'Please enter at least 1')
+      .typeError('Please enter a number'),
   });
 
   const form = useForm({
+    mode: 'onSubmit',
+    reValidateMode: 'onChange',
     defaultValues: {
-      quantity: 1,
+      quantity: cartItem.quantity,
     },
-
     resolver: yupResolver(schema),
   });
 
-  const handleSubmit = async (value) => {
-    if (onSubmit) {
-      await onSubmit(value);
-    }
+  const handleSubmit = (quantity) => {
+    const action = setQuantity({
+      id: cartItem.product.id,
+      quantity,
+    });
+    dispatch(action);
   };
+
   return (
     <form onSubmit={form.handleSubmit(handleSubmit)}>
       <QuantitySellCart name="quantity" label="quantity" form={form} onSubmit={handleSubmit} />
