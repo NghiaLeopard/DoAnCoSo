@@ -32,7 +32,8 @@ const useStyles = makeStyles(() => ({
     flexFlow: 'row nowrap',
     maxWidth: '180px',
     maxHeight: '30px',
-    marginTop: '-10px',
+    marginTop: '5px',
+    marginLeft: '45px',
   },
 }));
 
@@ -43,34 +44,23 @@ function QuantitySellCart(props) {
   const hasError = !!errors[name];
 
   return (
-    <FormControl error={hasError} margin="normal" fullWidth variant="outlined" size="small">
-      <Controller
-        control={form.control}
-        name={name}
-        render={({ onChange, onBlur, value, name }) => (
-          <Box className={classes.box}>
-            {/* giá trị trong input là string  */}
-            <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) - 1 : 1)}>
-              <RemoveCircleOutline />
-            </IconButton>
-            <OutlinedInput
-              id={name}
-              type="number"
-              disable={disable}
-              value={value}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
+    <Controller
+      control={form.control}
+      name={name}
+      render={({ onChange, onBlur, value, name }) => (
+        <Box className={classes.box}>
+          {/* giá trị trong input là string  */}
+          <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) - 1 : 1)}>
+            <RemoveCircleOutline />
+          </IconButton>
+          <OutlinedInput id={name} type="number" disable={disable} value={value} onChange={onChange} onBlur={onBlur} />
 
-            <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) + 1 : 1)}>
-              <AddCircleOutline />
-            </IconButton>
-          </Box>
-        )}
-      />
-
-      <FormHelperText>{errors[name]?.message}</FormHelperText>
-    </FormControl>
+          <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) + 1 : 1)}>
+            <AddCircleOutline />
+          </IconButton>
+        </Box>
+      )}
+    />
   );
 }
 

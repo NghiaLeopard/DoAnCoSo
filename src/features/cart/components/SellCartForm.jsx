@@ -30,7 +30,7 @@ function SellCartForm({ onSubmit = {} }) {
     }
   };
   return (
-    <form onSubmit={form.handleSubmit(handleSubmit)}>
+    <form onChange={form.handleSubmit(handleSubmit)}>
       <QuantitySellCart name="quantity" label="quantity" form={form} />
     </form>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Container, Grid, Paper, makeStyles } from '@material-ui/core';
+import { Box, Button, Container, Grid, Paper, makeStyles } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { cartItemsCountSelector } from './ceateSelector';
 import ProductsListSell from './components/ProductsListSell';
+import TotalPrice from './components/TotalPrice';
 
 CartFeature.propTypes = {};
 
@@ -40,7 +41,13 @@ function CartFeature(props) {
             </Paper>
           </Grid>
           <Grid item className={classes.right}>
-            <Paper elevation={0}>right</Paper>
+            <Paper elevation={0}>
+              <TotalPrice />
+            </Paper>
+
+            <Button variant="contained" color="secondary" style={{ padding: '10px 90px', marginTop: '20px' }}>
+              Tiến hành đặt hàng
+            </Button>
           </Grid>
         </Grid>
       </Container>
