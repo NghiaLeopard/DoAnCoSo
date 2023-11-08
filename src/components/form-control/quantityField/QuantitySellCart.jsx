@@ -32,32 +32,46 @@ const useStyles = makeStyles(() => ({
     flexFlow: 'row nowrap',
     maxWidth: '180px',
     maxHeight: '30px',
-    marginTop: '5px',
+    marginTop: '-10px',
     marginLeft: '45px',
   },
 }));
 
 function QuantitySellCart(props) {
   const classes = useStyles();
+  const { form, name, label, disable } = props;
+  const { errors, setValue } = form;
+  const hasError = !!errors[name];
 
   return (
-    <Controller
-      control={''}
-      name={''}
-      render={({ onChange, onBlur, value, name }) => (
-        <Box className={classes.box}>
-          {/* giá trị trong input là string  */}
-          <IconButton>
-            <RemoveCircleOutline />
-          </IconButton>
-          <OutlinedInput id={name} type="number" value={value} onChange={onChange} onBlur={onBlur} />
+    <FormControl error={hasError} margin="normal" fullWidth variant="outlined" size="small">
+      <Controller
+        control={form.control}
+        name={name}
+        render={({ onChange, onBlur, value, name }) => (
+          <Box className={classes.box}>
+            {/* giá trị trong input là string  */}
+            <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) - 1 : 1)}>
+              <RemoveCircleOutline />
+            </IconButton>
+            <OutlinedInput
+              id={name}
+              type="number"
+              disable={disable}
+              value={value}
+              onChange={onChange}
+              onBlur={onBlur}
+            />
 
-          <IconButton>
-            <AddCircleOutline />
-          </IconButton>
-        </Box>
-      )}
-    />
+            <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) + 1 : 1)}>
+              <AddCircleOutline />
+            </IconButton>
+          </Box>
+        )}
+      />
+
+      <FormHelperText>{errors[name]?.message}</FormHelperText>
+    </FormControl>
   );
 }
 

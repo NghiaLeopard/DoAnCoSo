@@ -4,6 +4,7 @@ import { STATIC_HOST, THUMBNAIL_PLACEHOLDER } from 'constants/index';
 import { Button, makeStyles } from '@material-ui/core';
 import { formatPrice } from 'features/Product/components/utils';
 import QuantitySellCart from 'components/form-control/quantityField/QuantitySellCart';
+import QuantitySell from './QuantitySell';
 ProductsSell.propTypes = {};
 
 function ProductsSell({ onChange, products }) {
@@ -39,7 +40,7 @@ function ProductsSell({ onChange, products }) {
           {products.product.promotionPercent ? ` | -${products.product.promotionPercent}%` : '0%'}
         </div>
       </div>
-      <QuantitySellCart />
+      <QuantitySell />
     </div>
   );
 }
