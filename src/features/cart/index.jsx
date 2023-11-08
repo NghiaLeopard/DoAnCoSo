@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Button, Container, Grid, Paper, makeStyles } from '@material-ui/core';
-import { useSelector } from 'react-redux';
-import { cartItemsCountSelector } from './ceateSelector';
+import { useDispatch, useSelector } from 'react-redux';
+import { cartItemsCountSelector } from './createSelector';
 import ProductsListSell from './components/ProductsListSell';
 import TotalPrice from './components/TotalPrice';
+import { removeCart } from './cartSelector';
 
 CartFeature.propTypes = {};
 
@@ -25,10 +26,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function CartFeature(props) {
-  const cartItems = useSelector((state) => state.cart.cartItems);
-  console.log(cartItems);
   const cartItemsCount = useSelector(cartItemsCountSelector);
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const handleRemoveCart = (id) => {
+    dispatch(removeCart(id));
+  };
 
   return (
     <Box>
@@ -37,7 +41,7 @@ function CartFeature(props) {
         <Grid container spacing={2}>
           <Grid item className={classes.left}>
             <Paper elevation={0}>
-              <ProductsListSell />
+              <ProductsListSell onChange={handleRemoveCart} />
             </Paper>
           </Grid>
           <Grid item className={classes.right}>

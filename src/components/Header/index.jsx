@@ -14,7 +14,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import Login from 'features/Auth/components/Login';
 import Register from 'features/Auth/components/Register';
 import { logout } from 'features/Auth/userSlice';
-import { cartItemsCountSelector } from 'features/cart/ceateSelector';
+import { cartItemsCountSelector } from 'features/cart/createSelector';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';

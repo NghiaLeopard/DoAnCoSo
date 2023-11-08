@@ -39,23 +39,20 @@ const useStyles = makeStyles(() => ({
 
 function QuantitySellCart(props) {
   const classes = useStyles();
-  const { form, name, label, disable } = props;
-  const { errors, setValue } = form;
-  const hasError = !!errors[name];
 
   return (
     <Controller
-      control={form.control}
-      name={name}
+      control={''}
+      name={''}
       render={({ onChange, onBlur, value, name }) => (
         <Box className={classes.box}>
           {/* giá trị trong input là string  */}
-          <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) - 1 : 1)}>
+          <IconButton>
             <RemoveCircleOutline />
           </IconButton>
-          <OutlinedInput id={name} type="number" disable={disable} value={value} onChange={onChange} onBlur={onBlur} />
+          <OutlinedInput id={name} type="number" value={value} onChange={onChange} onBlur={onBlur} />
 
-          <IconButton onClick={() => setValue(name, Number.parseInt(value) ? Number.parseInt(value) + 1 : 1)}>
+          <IconButton>
             <AddCircleOutline />
           </IconButton>
         </Box>

@@ -5,8 +5,11 @@ import ProductsSell from './ProductsSell';
 
 ProductsListSell.propTypes = {};
 
-function ProductsListSell(props) {
+function ProductsListSell({ onChange }) {
   const cartItems = useSelector((state) => state.cart.cartItems);
+  function handleRemove(id) {
+    onChange(id);
+  }
 
   console.log(cartItems);
   return (
@@ -16,7 +19,7 @@ function ProductsListSell(props) {
       <ul style={{ listStyle: 'none' }}>
         {cartItems.map((products) => (
           <li key={products.id}>
-            <ProductsSell products={products} />
+            <ProductsSell products={products} onChange={handleRemove} />
           </li>
         ))}
       </ul>

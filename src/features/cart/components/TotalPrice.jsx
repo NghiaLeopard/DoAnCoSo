@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { cartItemsTotalSelector } from '../ceateSelector';
+import { cartItemsTotalSelector } from '../createSelector';
 
 TotalPrice.propTypes = {};
 
