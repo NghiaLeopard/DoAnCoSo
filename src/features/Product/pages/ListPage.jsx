@@ -74,7 +74,11 @@ function ListPage(props) {
     (async () => {
       try {
         const { data, pagination } = await productApi.getAll(queryParam);
-        setProductList(data);
+        const data1 = data.filter((x) => x.category.name !== 'Khẩu trang');
+        const data2 = data1.filter((x) => x.category.name !== 'Thời trang');
+        const newData = data2.filter((x) => x.category.name !== 'Làm đẹp');
+
+        setProductList(newData);
         setPagination(pagination);
         console.log({ data, pagination });
       } catch (error) {

@@ -44,8 +44,11 @@ function FilterByCategory({ onChange }) {
     (async () => {
       try {
         const list = await categoryApi.getAll();
+        const data1 = list.filter((x) => x.name !== 'Khẩu trang');
+        const data2 = data1.filter((x) => x.name !== 'Thời trang');
+        const newData = data2.filter((x) => x.name !== 'Làm đẹp');
         setCategoryList(
-          list.map((x) => ({
+          newData.map((x) => ({
             id: x.id,
             name: x.name,
           }))
@@ -61,6 +64,7 @@ function FilterByCategory({ onChange }) {
       onChange(category.id);
     }
   };
+
   return (
     <Box className={classes.root}>
       <Typography variant="subtitle2">DANH MỤC SẢN PHẨM</Typography>
