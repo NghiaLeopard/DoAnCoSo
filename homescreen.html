@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Trang chủ | EZ Shop</title>
+    <link rel="stylesheet" href="homescreen.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!----------------------------header--------------------------->
+    <div class="header">
+        <div class="logo">
+            <a href="#">
+                <i class='bx bx-chevron-left'></i>
+                <i class='bx bx-chevron-right' style="margin-right: 20px;"></i>
+                <p>EZ SHOP</p>
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <a href="" id="menu1">THỜI TRANG</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" id="menu2">KHẨU TRANG</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" id="menu3">LÀM ĐẸP</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" id="menu4">LAPTOP</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" id="menu5">Ổ CỨNG</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" id="menu6">ĐIỆN THOẠI</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-action">
+            <div class="header-cart">
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="header-login">
+                <a href="" id="login">LOGIN</a>
+            </div>
+        </div>
+    </div>
+    <!--------------------------body---------------------------->
+    <div class="body-container">
+        <div class="body-top">
+            <div class="slider">
+                <div class="slide-picture">                    
+                    <img src="https://cf.shopee.vn/file/vn-50009109-3b4844af326ff3b9c1e1793d0dbda9f3_xxhdpi"> 
+                    <img id="slide-img1" src="https://cf.shopee.vn/file/vn-50009109-eed652f70e6a01c52e9bc1848e731ca5_xxhdpi">                  
+                    <img id="slide-img1" src="https://cf.shopee.vn/file/vn-50009109-6dd938c7d1e23c080fc69a576086bd05_xxhdpi">
+                    <img src="https://cf.shopee.vn/file/vn-50009109-1a46c56c0f2797f7b925c94a77ad6146_xxhdpi" alt=""> 
+                    <img src="https://cf.shopee.vn/file/vn-50009109-6f15a7d3b349b891a9a8f99cd1ee716d_xxhdpi" alt="">     
+                    <img src="https://cf.shopee.vn/file/vn-50009109-7ce429fdc815059d22cdcbb680707fae_xxhdpi" alt="">   
+                </div>
+                <div class="dot-container">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="body-top-others">
+                <a href=""><img src="https://cf.shopee.vn/file/vn-50009109-fdd5d8403e28107f3ed51f52ad2257c3_xhdpi" alt=""></a>
+                <a href=""><img src="https://cf.shopee.vn/file/vn-50009109-568160051c9a311e5201c97e957bfa78_xhdpi" alt=""></a>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="product">
+                <h1>Thời Trang <span style="color: red;">HOT</span></h1>
+                <div class="product-container">
+                    <div class="product-slider" id="product-slider">  
+                        <div class="product-item">
+                            <div class="bestSeller">
+                                <img src="image/iconBestSeller.png" alt="" style="position: absolute;z-index:1000;left:-5px">
+                            </div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/03/10/17a94756b0b655127bc9460906248317.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/03/10/da0c0bfe458ed8e4a85a530f4b23655f.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/03/21/1ecdac8afe8ae7614c52818c2f92e6bc.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/03/27/668d8acaa9c09e5e99b9985d7986d0ab.JPG" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">                           
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color2" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color2">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/002.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Ren Dáng Ôm Tay Phồng</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>1.490.000đ</b></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50 <sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/06/16/24d3c53a696a8a2c5a4a7380e84e0511.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/06/16/c283ae75dcff87680406968a0887a5cb.JPG" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/07/20/1b0e624de4f45aa11c25b0586ce87ac0.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/07/20/839bb3b2d72a52ad988009479b92a831.JPG" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color3" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color3" >
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/013.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Peplum Xẻ Tà</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>675.000đ</b></p>
+                                    <p>1.350.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50 <sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/01/07/d6009dcbb79e8eecfd074ef7d1b8cbbc.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2023/01/07/82384766865026b1d5130e67ddd9cff9.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/01/07/81999fd2da47f4aba6e70e0f66adb7dc.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/01/07/6785b314b44f193f3d570a9860647ee0.jpg" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color4" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color4">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Tapta Trễ Vai</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>645.000đ</b></p>
+                                    <p>1.290.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50<sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/19/6375f3b5e06b411a1c187b74b05948be.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/19/ce048043606d5d4f8bbd0f397b2de60f.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/18/94296efcf32874b316c1af1acf2aec4d.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/18/5d48f1e115f565e45145ee9844ec4d72.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img3 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/19/92364e4f8d259d431a534ab15178d5af.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/08/19/93b6281b502fa56e47e2e2508e7c9ecb.jpg" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color5" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color5">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color3" onclick="chooseColor(this)">
+                                        <input type="radio" name="color5">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/031.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Sơ Mi Lụa Cài Khuy Ẩn</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>495.000đ</b></p>
+                                    <p>990.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/05/1e0c1098ad25b7c1bc0527b53d7533a3.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/05/d4ccbb644c4c3f23d58d3c5f85cb8139.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/07/0f1cc72d1632f8545bdfa7265948f1b7.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/07/5591b1179ac955766e7fe64f72d77672.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img3 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/08/16/670b0680e1f314fd40d5581ce36bf1f6.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/08/16/5e737def4a12781dce7fc75fbe8616f5.JPG" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color6" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color6">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/014.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color3" onclick="chooseColor(this)">
+                                        <input type="radio" name="color6">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/006.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Sơ Mi Tencel Thêu Viền</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>1.090.000đ</b></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50<sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/29/cde094d23a57bc48f019bcbeb729e36f.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/29/882c1f80296398f42e309efe85a31387.JPG" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/08/f84505053dbb38a788578e4074a0b2e5.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/07/08/85aea1c72eba5a28d4278814ab8707fe.JPG" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color7" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color7">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/012.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Trễ Vai Bo Chun
+                                    </p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>445.000đ</b></p>
+                                    <p>890.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50<sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/a53255493de2fab90073e2fd93cc44ef.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/9db164edfb1354512d2efd0494da3870.jpg" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/54669de65dc4ab2f12c1f92224867abe.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/49fc11d9976d5171a383a90a4243952a.jpg" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color8" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color8">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/049.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>                            
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Sơ Mi Lụa Cổ Bẻ 2 Ve</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>495.000đ</b></p>
+                                    <p>990.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50<sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/29/2a5332d69ad1d4a2f9854efe81719be5.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/29/a45ed61367995bfddc3dc4b2eb6e0eef.JPG" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/d1d0bf13b04b99ed56eb8697f1bff3e2.jpg" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/20/533aeda6033f32524d9035684ec0f1b3.jpg" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color9" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color9">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Sơ Mi Tencel Chun Vai Tay Bồng</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>545.000đ</b></p>
+                                    <p>1.090.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-50<sup>%</sup></div>
+                            <div class="product-img box-img1 box-img">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/04/0b2d7e121026d1f0b371bbcb1729baab.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/06/04/dbed028747412a5038b9a46e30d32011.JPG" alt=""></a>
+                            </div>
+                            <div class="product-img box-img2 box-img" style="display: none;">
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/05/17/7100bde61aa9490c6e6ec84d2e2a60d9.JPG" alt=""></a>
+                                <a href=""><img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2022/05/17/c8bde88487d94157037448533a69903e.JPG" alt=""></a>
+                            </div>
+                            <div class="product-info" >
+                                <div class="product-color product-detail__color__input" style="display: flex;align-items:center">
+                                    <label for="" class="color1" onclick="chooseColor(this)">
+                                        <input type="radio" name="color10" checked>
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <label for="" class="color2" onclick="chooseColor(this)">
+                                        <input type="radio" name="color10">
+                                        <span>
+                                            <a href="#">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/005.png" alt="">
+                                            </a>
+                                        </span>
+                                    </label>                            
+                                    <i class='bx bx-heart'></i>
+                                </div>                       
+                                <div class="product-name">
+                                    <a href=""><p>Áo Lụa Xếp Nhấn Eo</p></a>
+                                </div>
+                                <div class="product-price">
+                                    <p><b>475.000đ</b></p>
+                                    <p>950.000đ</p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        </div> 
+                        <i class='bx bx-left-arrow-alt' onclick="left()"></i>
+                        <i class='bx bx-right-arrow-alt' onclick="right()" ></i>    
+                    </div>
+                <div class="link-product"> 
+                    <a href="" class="viewAll">Xem tất cả</a>
+                </div>
+            </div>
+            <div class="product">
+                <h1>LAPTOP <span style="color: red;">HOT</span></h1>
+                <div class="product-container">
+                    <div class="product-slider" id="product-slider">  
+                        <div class="product-item">
+                            <div class="sale">-18 <sup>%</sup></div>
+                            <div class="laptop-product-img">
+                                <a href=""><img src="https://laptop88.vn/media/product/pro_poster_7683.jpg" alt=""></a>
+                            </div>
+                            <div class="laptop-product-info" >
+                                <a href="" class="product-name"><p>[New 100%] Laptop Dell Inspiron 14 5420 R1608S - Intel Core i5...</p></a>
+                                <img src="https://laptop88.vn/template/giaodien_2022/images/sticker-3.png" alt="">
+                                <table>
+                                    <tr>
+                                        <td><p>CPU</p></td>
+                                        <td><p>i5 - 1240P</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>RAM</p></td>
+                                        <td><p>16GB DDR4</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Ổ cứng</p></td>
+                                        <td><p>SSD 512GB NVMe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Card</p></td>
+                                        <td><p>Intel Iris Xe Graphics</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>M.Hình</p></td>
+                                        <td><p>14" 2.2K</p></td>
+                                    </tr>
+                                </table>
+                                <div class="laptop-product-price">
+                                    <p>14.790.000đ<span>17.990.000đ</span></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-31 <sup>%</sup></div>
+                            <div class="laptop-product-img">
+                                <a href=""><img src="https://laptop88.vn/media/product/pro_poster_8488.jpg" alt=""></a>
+                            </div>
+                            <div class="laptop-product-info" >
+                                <a href="" class="product-name"><p>[New 100%] Asus Vivobook 16X M1603QA-90NB0Y81-M00SC0...</p></a>
+                                <img src="https://laptop88.vn/template/giaodien_2022/images/sticker-4.png" alt="">
+                                <table>
+                                    <tr>
+                                        <td><p>CPU</p></td>
+                                        <td><p>AMD R7-5800HS</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>RAM</p></td>
+                                        <td><p>12GB DDR4</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Ổ cứng</p></td>
+                                        <td><p>SSD 512GB NVMe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Card</p></td>
+                                        <td><p>AMD Radeon Graphics</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>M.Hình</p></td>
+                                        <td><p>16 inch Full HD+</p></td>
+                                    </tr>
+                                </table>
+                                <div class="laptop-product-price">
+                                    <p>13.990.000đ<span>19.990.000đ</span></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-40 <sup>%</sup></div>
+                            <div class="laptop-product-img">
+                                <a href=""><img src="https://laptop88.vn/media/product/pro_poster_8550.jpg" alt=""></a>
+                            </div>
+                            <div class="laptop-product-info" >
+                                <a href="" class="product-name"><p>[New Outlet] Laptop Lenovo Flex 7 14IAU7 82VC0001US - Intel...</p></a>
+                                <img src="https://laptop88.vn/template/giaodien_2022/images/sticker-4.png" alt="">
+                                <table>
+                                    <tr>
+                                        <td><p>CPU</p></td>
+                                        <td><p>i5 - 1240P</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>RAM</p></td>
+                                        <td><p>16GB DDR4</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Ổ cứng</p></td>
+                                        <td><p>SSD 512GB</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Card</p></td>
+                                        <td><p>Intel® Iris® Xe Graphics</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>M.Hình</p></td>
+                                        <td><p>14 2.2K 100% sRGB</p></td>
+                                    </tr>
+                                </table>
+                                <div class="laptop-product-price">
+                                    <p>14.590.000đ<span>23.990.000đ</span></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-14 <sup>%</sup></div>
+                            <div class="laptop-product-img">
+                                <a href=""><img src="https://laptop88.vn/media/product/pro_poster_5117.jpg" alt=""></a>
+                            </div>
+                            <div class="laptop-product-info" >
+                                <a href="" class="product-name"><p>[New 100%] Laptop HP Envy X360 2 in 1 14-es0013dx...</p></a>
+                                <img src="https://laptop88.vn/template/giaodien_2022/images/sticker-1.png" alt="">
+                                <table>
+                                    <tr>
+                                        <td><p>CPU</p></td>
+                                        <td><p>i5-1335U</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>RAM</p></td>
+                                        <td><p>8GB DDR4</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Ổ cứng</p></td>
+                                        <td><p>SSD 512GB NVMe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Card</p></td>
+                                        <td><p>Intel Iris Xe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>M.Hình</p></td>
+                                        <td><p>14" Full HD Touch</p></td>
+                                    </tr>
+                                </table>
+                                <div class="laptop-product-price">
+                                    <p>15.490.000đ<span>17.990.000đ</span></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="sale">-38 <sup>%</sup></div>
+                            <div class="laptop-product-img">
+                                <a href=""><img src="https://laptop88.vn/media/product/pro_poster_8441.jpg" alt=""></a>
+                            </div>
+                            <div class="laptop-product-info" >
+                                <a href="" class="product-name"><p>Laptop Cũ Asus Vivobook Pro K3400P-90NB0UY3 | Intel Core...</p></a>
+                                <img src="https://laptop88.vn/template/giaodien_2022/images/sticker-1.png" alt="">
+                                <table>
+                                    <tr>
+                                        <td><p>CPU</p></td>
+                                        <td><p>i5-11300H</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>RAM</p></td>
+                                        <td><p>16GB DDR4</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Ổ cứng</p></td>
+                                        <td><p>SSD 512GB NVMe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>Card</p></td>
+                                        <td><p>Intel Iris Xe</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>M.Hình</p></td>
+                                        <td><p>14" 2.8K 100% sRGB</p></td>
+                                    </tr>
+                                </table>
+                                <div class="laptop-product-price">
+                                    <p>23.990.000đ<span>14.990.000đ</span></p>
+                                    <a href="product.html">
+                                        <i class='bx bx-shopping-bag'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <i class='bx bx-left-arrow-alt' onclick="left()"></i>
+                    <i class='bx bx-right-arrow-alt' onclick="right()" ></i>    
+                </div>
+                <div class="link-product"> 
+                    <a href="" class="viewAll">Xem tất cả</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------footer------------------------------------->
+    <footer>
+        <div class="footer-container">
+            <div class="left-footer">
+                <div class="top-left-footer">
+                    <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/logo-footer.png" alt=""></a>
+                    <a href=""><img src="https://images.dmca.com/Badges/dmca_protected_16_120.png?ID=0cfdeac4-6e7f-4fca-941f-57a0a0962777" alt=""></a>
+                    <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/img-congthuong.png" alt=""></a>
+                </div>
+                <div class="content-left-footer">
+                    <div class="info-left-footer">
+                        <p>Công ty Cổ phần Dự Kim với số đăng ký kinh doanh: 0105777650</p>
+                        <p><b>Địa chỉ đăng ký: </b>TP.Hà Nội, Việt Nam</p>
+                        <p><b>Số điện thoại: </b>0243 205 2222/ 090 589 8683</p>
+                        <p><b>Email: </b>cskh@ez.com.vn</p>
+                    </div>
+                    <div class="list-social">
+                        <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/ic_fb.svg" alt=""></a>
+                        <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/ic_gg.svg" alt=""></a>
+                        <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/ic_instagram.svg" alt=""></a>
+                        <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/ic_pinterest.svg" alt=""></a>
+                        <a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/ic_ytb.svg" alt=""></a>
+                    </div>
+                    <div class="hotline">
+                        <a href="">HOTLINE: 0905092886</a>
+                    </div>
+                </div>
+            </div>
+            <div class="center-footer">
+                <div class="left-center-footer">
+                    <p class="title-footer">Giới thiệu</p>
+                    <ul>
+                        <li><a href="">Về EZ Shop</a></li>
+                        <li><a href="">Tuyển dụng</a></li>
+                        <li><a href="">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="main-center-footer">
+                    <p class="title-footer">Dịch vụ khách hàng</p>
+                    <ul>
+                        <li><a href="">Chính sách điều khoản</a></li>
+                        <li><a href="">Hướng dẫn mua hàng</a></li>
+                        <li><a href="">Chính sách thanh toán</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Chính sách giao nhận vận chuyển</a></li>
+                        <li><a href="">Chính sách thẻ thành viên</a></li>
+                        <li><a href="">Hệ thống cửa hàng</a></li>
+                        <li><a href="">Q&A</a></li>
+                    </ul>
+                </div>
+                <div class="right-center-footer">
+                    <div class="left-center-footer">
+                        <p class="title-footer">Liên hệ</p>
+                        <ul>
+                            <li><a href="">Hotline</a></li>
+                            <li><a href="">Email</a></li>
+                            <li><a href="">Live Chat</a></li>
+                            <li><a href="">Messenger</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="register-form">
+                    <p class="title-footer">Nhận thông tin các chương trình của EZ Shop</p>
+                    <form id="frm-subcribe">
+                        <input type="text" name="email" placeholder="Nhập địa chỉ email" required="required">
+                        <button>Đăng ký</button>
+                    </form>
+                </div>
+                <div class="info-right-footer">
+                    <p class="title-footer">Download App</p>
+                    <ul>
+                        <li><a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/appstore.png" alt=""></a></li>
+                        <li><a href=""><img src="https://pubcdn.ivymoda.com/ivy2/images/googleplay.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>©EZShop All rights reserved</p>
+        </div>
+    </footer>
+<script>
+const header = document.querySelector(".header")
+window.addEventListener("scroll",function(){
+    x = window.pageYOffset
+    if(x>0){
+        header.classList.add("sticky")
+    }
+    else{
+        header.classList.remove("sticky")
+    }
+})
+const imgPosition = document.querySelectorAll(".slide-picture img")
+const imgContainer = document.querySelector('.slide-picture')
+const dotItem = document.querySelectorAll(".dot")
+let imgNumber = imgPosition.length
+let index=0
+imgPosition.forEach(function(image,index){
+    image.style.left = index*100 + "%"
+    dotItem[index].addEventListener("click",function(){
+        slider(index)
+    })
+})
+function imgSlide(){
+    index++;
+    if(index>=imgNumber) index=0
+    slider(index)
+}
+function slider (index){
+    imgContainer.style.left = "-" +index*100+ "%"
+    const dotActive = document.querySelector('.active')
+    dotActive.classList.remove("active")
+    dotItem[index].classList.add("active")
+}
+setInterval(imgSlide,5000)
+</script>
+<script src="project.js"></script>
+</body>
+</html>
