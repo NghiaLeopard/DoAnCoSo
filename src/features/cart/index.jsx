@@ -41,7 +41,7 @@ function CartFeature(props) {
   return (
     <Box>
       <Container>
-        <p>GIỎ HÀNG ({cartItemsCount} sản phẩm)</p>
+        <p style={{ margin: '30px', marginLeft: '0px' }}>GIỎ HÀNG ({cartItemsCount} sản phẩm)</p>
         <Grid container spacing={2}>
           <Grid item className={classes.left}>
             <Paper elevation={0}>

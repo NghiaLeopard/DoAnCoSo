@@ -19,7 +19,7 @@ function ProductsSell({ onChange, products, onSubmit }) {
 
   console.log(products);
   return (
-    <div style={{ display: 'flex', marginBottom: '20px', paddingBottom: '20px' }}>
+    <div style={{ display: 'flex', marginBottom: '20px', paddingBottom: '20px', marginLeft: '40px' }}>
       <img src={thumbnailUrl} alt="pro" style={{ height: '150px' }} />
       <div style={{ marginLeft: '20px' }}>
         <div style={{ fontSize: '22px', fontWeight: 'bold', minWidth: '280px' }}>{products.product.name}</div>
