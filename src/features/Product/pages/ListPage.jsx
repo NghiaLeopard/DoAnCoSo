@@ -78,14 +78,10 @@ function ListPage(props) {
         setPagination(pagination);
         console.log({ data, pagination });
       } catch (error) {
-        console.log('failed to fetch product list', error);
         return (
-          <div>
-            <Backdrop className={classes.backdrop} open>
-              <CircularProgress color="inherit" />
-            </Backdrop>
-            ;
-          </div>
+          <Backdrop className={classes.backdrop} open>
+            <CircularProgress color="inherit" />
+          </Backdrop>
         );
       }
 
