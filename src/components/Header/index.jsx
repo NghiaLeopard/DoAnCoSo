@@ -85,7 +85,7 @@ export default function Headers() {
           <CodeIcon className={classes.menuButton} />
 
           <Typography variant="h6" className={classes.title}>
-            <Link className={classes.link} to="/">
+            <Link className={classes.link} to="/products">
               EZ SHOP
             </Link>
           </Typography>
