@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Container, Grid, Paper, makeStyles } from '@material-ui/core';
+import { Backdrop, Box, CircularProgress, Container, Grid, Paper, makeStyles } from '@material-ui/core';
 import ProductsThumbNail from '../components/ProductsThumbnail';
 import { Route, Router, Switch, useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import useProductDetail from '../hooks/useProductDetail';
@@ -41,7 +41,11 @@ function DetailPage() {
   const { product, loading } = useProductDetail(productId);
 
   if (loading) {
-    return <Box>Loading</Box>;
+    return (
+      <Backdrop className={classes.backdrop} open>
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    );
   }
 
   const handleAddToCartSubmit = (formValues) => {

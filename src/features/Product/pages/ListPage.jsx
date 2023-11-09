@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Container, Grid, Paper, Typography, makeStyles } from '@material-ui/core';
+import { Backdrop, Box, CircularProgress, Container, Grid, Paper, Typography, makeStyles } from '@material-ui/core';
 import { useEffect } from 'react';
 import productApi from 'api/productApi';
 import { useState } from 'react';
@@ -79,6 +79,14 @@ function ListPage(props) {
         console.log({ data, pagination });
       } catch (error) {
         console.log('failed to fetch product list', error);
+        return (
+          <div>
+            <Backdrop className={classes.backdrop} open>
+              <CircularProgress color="inherit" />
+            </Backdrop>
+            ;
+          </div>
+        );
       }
 
       setLoading(false);
