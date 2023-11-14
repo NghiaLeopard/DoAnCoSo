@@ -1,0 +1,131 @@
+footer{
+    margin-top: 20px;
+    border-top: 1px solid #6c6d70;
+}
+.footer-container{
+    display: flex;
+    padding: 50px 150px;
+    border-bottom: 1px solid rgb(150, 147, 147);
+}
+.left-footer{
+    width: 25%;
+}
+.top-left-footer img{
+    width: 80px;
+}
+.top-left-footer>a:first-child>img{
+    width: 120px;
+}
+.content-left-footer{
+    margin-top: 20px;
+}
+.content-left-footer p{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+.list-social{
+    width: 60%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.list-social a{
+    display: block;
+    width: 15%;
+    margin-right: 20px;
+}
+.list-social a img{
+    width: 30px;
+    height: 30px;
+    
+}
+.hotline{
+    margin-top: 30px;
+}
+.hotline a{
+    display: block;
+    width: 250px;
+    height: 60px;
+    padding: 20px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: black;
+    font-weight: bold;
+    border-radius: 20px 0 20px 0;
+}
+.center-footer{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.center-footer li{
+    margin-top: 25px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.right-footer{
+    width: 25%;
+    
+}
+.register-form{
+    border: 8px solid #dcd9d9;
+    padding: 30px 15px;
+    border-radius: 70px 0 70px 0;
+}
+.right-footer .title-footer{
+    font-size: 18px;
+    padding-right: 70px;
+    line-height: 30px;
+}
+#frm-subcribe{
+    margin-top: 20px;
+    display: flex;
+}
+#frm-subcribe input{
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid #6a6969;
+    padding-bottom: 20px;
+    width: 180px;
+}
+#frm-subcribe button{
+    width: 122px;
+    height: 46px;
+    background-color: white;
+    border-radius: 25px 0 25px 0;
+    border: 1px solid #6a6969;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#frm-subcribe button:hover{
+    background-color: black;
+    color: white;
+}
+.info-right-footer{
+    margin-top: 35px;
+}
+.info-right-footer ul{
+    margin-top: 20px;
+}
+.info-right-footer li{
+    margin-top: 6px;
+}
+.info-right-footer .title-footer{
+    font-size: 25px;
+}
+.title-footer{
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.end{
+    text-align: center;
+    padding: 35px 0;
+    font-size: 20px;
+}
