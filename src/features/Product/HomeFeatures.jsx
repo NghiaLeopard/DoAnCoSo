@@ -6,7 +6,7 @@ import HomeScreen from './pages/homescreen/HomeScreen';
 import ReturnPolicy from './components/ReturnPolicy/ReturnPolicy';
 import ThanhToan from './components/ThanhToan/ThanhToan';
 import DieuKhoan from './components/DieuKhoan/DieuKhoan';
-import BaoHanh from './components/BaoHanh.jsx/BaoHanh';
+import BaoHanh from './components/BaoHanh/BaoHanh';
 
 HomeFeatures.propTypes = {};
 

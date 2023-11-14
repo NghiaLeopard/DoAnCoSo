@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './homescreen.css';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 HomeScreen.propTypes = {};
 
@@ -731,21 +732,32 @@ function HomeScreen(props) {
               <div className="main-center-footer">
                 <p className="title-footer">Dịch vụ khách hàng</p>
                 <ul>
-                  <li>
-                    <a href="">Chính sách điều khoản</a>
-                  </li>
+                  <Link to="/mainpages/Khoanpolicy">
+                    <li>
+                      <a href="">Chính sách điều khoản</a>
+                    </li>
+                  </Link>
+
                   <li>
                     <a href="">Hướng dẫn mua hàng</a>
                   </li>
-                  <li>
-                    <a href="">Chính sách thanh toán</a>
-                  </li>
-                  <li>
-                    <a href="">Chính sách đổi trả</a>
-                  </li>
-                  <li>
-                    <a href="">Chính sách bảo hành</a>
-                  </li>
+                  <Link to="/mainpages/sellPolicy">
+                    <li>
+                      <a href="">Chính sách thanh toán</a>
+                    </li>
+                  </Link>
+
+                  <Link to="/mainpages/returnPolicy">
+                    <li>
+                      <a href="">Chính sách đổi trả</a>
+                    </li>
+                  </Link>
+
+                  <Link to="/mainpages/baoPolicy">
+                    <li>
+                      <a href="">Chính sách bảo hành</a>
+                    </li>
+                  </Link>
                   <li>
                     <a href="">Chính sách giao nhận vận chuyển</a>
                   </li>
