@@ -6,6 +6,7 @@ import ProductFeature from 'features/Product';
 import CartFeature from 'features/cart';
 import HomeScreen from 'features/Product/pages/homescreen/HomeScreen';
 import HomeFeatures from 'features/Product/HomeFeatures';
+import { OrderDetails } from 'features/orderdetails/OrderDetails';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
         <Route path="/products" component={ProductFeature} />
         <Route path="/cart" component={CartFeature} />
-     <Route path="/order-details" component={OrderDetails} />
+        <Route path="/order-details" component={OrderDetails} />
       </Switch>
     </div>
   );
