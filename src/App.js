@@ -18,6 +18,7 @@ function App() {
 
         <Route path="/products" component={ProductFeature} />
         <Route path="/cart" component={CartFeature} />
+     <Route path="/order-details" component={OrderDetails} />
       </Switch>
     </div>
   );
