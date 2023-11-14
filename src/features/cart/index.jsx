@@ -6,6 +6,7 @@ import { cartItemsCountSelector } from './createSelector';
 import ProductsListSell from './components/ProductsListSell';
 import TotalPrice from './components/TotalPrice';
 import { removeCart } from './cartSelector';
+import { Link } from 'react-router-dom';
 
 CartFeature.propTypes = {};
 
@@ -53,9 +54,9 @@ function CartFeature(props) {
               <TotalPrice />
             </Paper>
 
-            <Button variant="contained" color="secondary" style={{ padding: '10px 90px', marginTop: '20px' }}>
+            <Link to="/order-details"  variant="contained" color="secondary" style={{ padding: '10px 90px', marginTop: '20px' }}>
               Tiến hành đặt hàng
-            </Button>
+            </Link>
           </Grid>
         </Grid>
       </Container>
